@@ -1,0 +1,18 @@
+@mixin center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin centertwo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin button-settings {
+	color: $base-color;
+	border-radius: 4px;
+	font-family: Inter;
+	font-size: 17px;
+	font-weight: 400;
+	cursor: pointer;
+}

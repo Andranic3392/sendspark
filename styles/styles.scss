@@ -1,0 +1,202 @@
+@import "variables";
+@import "mixins";
+
+body {
+  background-color: $base-color;
+}
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.header {
+  @include center;
+  margin: 0 160px;
+  height: 104px;
+  background-color: $base-color;
+
+  &-logo__img {
+    height: 24px;
+    width: 129px;
+    background-image: url(../img/logo.png);
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+}
+.button-tertiary {
+  font-family: Inter;
+  font-size: 17px;
+  color: black;
+  padding: 9px 20px;
+  font-weight: 400;
+}
+.primary {
+  @include button-settings;
+  margin-left: 23px;
+  padding: 15px 22px;
+  background-color: $second-color;
+  border: 2px solid $second-color;
+  transition: 0.15s all;
+  &:hover {
+    background-color: #745af8;
+  }
+  &:active {
+    background-color: #4f30ec;
+  }
+}
+
+/* Стилизация main */
+
+.main {
+  margin: 0 160px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 96px;
+  &-content__title {
+    color: black;
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 400;
+    max-width: 349px;
+    line-height: 52px;
+  }
+  &-content__descr {
+    max-width: 407px;
+    color: #655b6e;
+    font-family: Inter;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 30px;
+    line-height: 32px;
+  }
+}
+.get-started {
+  @include button-settings;
+  background-color: #fabc32;
+  padding: 20px 30px;
+  border: 2px solid #fabc32;
+  margin-top: 18px;
+  transition: 0.15s all;
+  &:hover {
+    background-color: #e7b851;
+  }
+  &:active {
+    background-color: #ecae28;
+  }
+}
+.warning {
+  margin-top: 18px;
+  color: #655b6e;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* submain */
+
+.sub-main {
+  margin: 0 160px;
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 108px;
+  }
+}
+
+/* section2 */
+.section-extension {
+  margin: 0 160px;
+  @include center;
+  gap: 160px;
+  margin-top: 128px;
+}
+.extension-info {
+  width: 416px;
+  height: 408px;
+  &__title {
+    max-width: 371px;
+    color: #100b2b;
+    font-family: Roboto;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 44px; /* 115.789% */
+  }
+  &__descr {
+    max-width: 369px;
+    margin-top: 27px;
+    color: #655b6e;
+    font-family: Inter;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 32px; /* 290.909% */
+  }
+  &__benefit {
+    margin-top: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: rgba(0, 0, 0, 0.64);
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 164.706% */
+  }
+}
+.install {
+  gap: 8px;
+  @include centertwo;
+  background: $second-color;
+  @include button-settings;
+  width: 286px;
+  height: 64px;
+  border: 2px solid $second-color;
+  margin-top: 17px;
+  transition: 0.15s all;
+  &:hover {
+    background-color: #745af8;
+  }
+  &:active {
+    background-color: #4f30ec;
+  }
+}
+
+/* section woman */
+
+.section-woman {
+  @include centertwo;
+  justify-content: space-around;
+  margin: 0 160px;
+  background-color: $third-color;
+  border-radius: 16px;
+  height: 373px;
+  margin-top: 128px;
+}
+.woman-info {
+  gap: 18px;
+  display: flex;
+  flex-direction: column;
+  max-width: 615px;
+  &__title {
+    max-width: 595px;
+    color: #fef5e4;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px; /* 133.333% */
+  }
+  &__sign {
+    max-width: 223px;
+    color: #655b6e;
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 32px; /* 188.235% */
+  }
+}
+@import "adaptive";
